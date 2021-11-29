@@ -1,0 +1,11 @@
+<div
+  style="z-index: 100"
+  [ngClass]="type"
+  [@flyIn]="type"
+  (@flyIn.done)="endAnimation()"
+  (click)="toggle()"
+></div>
+<div [ngClass]="oldType" (click)="toggle()"></div>
+
+<br />
+<button style="position: fixed; bottom: 0" (click)="toggle()"></button>
